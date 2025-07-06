@@ -8,10 +8,50 @@
     <meta name="keywords" content="massagem tântrica, massagem relaxante, massagem centro RJ, massagem zona sul RJ, massoterapeuta, massagem sensual, Simone massagista, massagem para homens, massagem para mulheres, massagem profissional RJ">
     <meta name="author" content="Simone Massoterapeuta">
     <!-- Poppins font family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-Light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-SemiBold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-ExtraBold.woff2') format('woff2');
+      font-weight: 800;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-Black.woff2') format('woff2');
+      font-weight: 900;
+      font-style: normal;
+    }
+    </style>
     
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
@@ -57,8 +97,8 @@
                         'gradient-card': 'linear-gradient(145deg, #ffffff 0%, #FDF9F3 100%)',
                         'gradient-overlay': 'linear-gradient(135deg, rgba(184, 84, 80, 0.1) 0%, rgba(139, 69, 19, 0.1) 100%)',
                         'gradient-text': 'linear-gradient(135deg, #B85450 0%, #8B4513 50%, #DAA520 100%)',
-                        'gradient-section': 'linear-gradient(180deg, #FDF9F3 0%, #F5F0E8 50%, #E6B88A 100%)',
-                        'gradient-footer': 'linear-gradient(135deg, #5D4037 0%, #8B4513 100%)',
+                        'gradient-section': 'linear-gradient(135deg, #4b002a 0%, #4b002a 30%, #8a054b 30%, #8a054b 60%, #B85450 60%, #B85450 80%, #DAA520 80%, #DAA520 100%)',
+                        'gradient-footer': 'linear-gradient(135deg, #4b002a 0%, #4b002a 30%, #8a054b 30%, #8a054b 60%, #B85450 60%, #B85450 80%, #DAA520 80%, #DAA520 100%)',
                         'gradient-dark': 'linear-gradient(135deg, #5D4037 0%, #8D6E63 50%, #A0522D 100%)',
                         'gradient-glass': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
                         'gradient-accent': 'linear-gradient(135deg, #DAA520 0%, #F4A460 50%, #B8860B 100%)'
@@ -79,19 +119,49 @@
     
     <!-- CSS personalizado otimizado -->
     <style>
-        /* Reset e estilos base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        /*
+        =============================
+        |  FUNDO DO SITE (BODY)     |
+        |  Gradiente fluido geral   |
+        |  NÃO afeta CTA e rodapé   |
+        =============================
+        */
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #fff;
-            background: linear-gradient(45deg, #5D4037 0%, #8B4513 20%, #B85450 40%, #DAA520 60%, #E6B88A 80%, #F4A460 100%);
+            color: #5D4037;
+            background: linear-gradient(135deg, #B85450 0%, #F5F0E8 50%, #FDF9F3 100%);
             overflow-x: hidden;
+        }
+        /*
+        =============================
+        |  CTA FINAL                |
+        |  Fundo sólido separado    |
+        =============================
+        */
+        #contact {
+            background: #4b002a;
+        }
+        /*
+        =============================
+        |  LINHA DIVISÓRIA          |
+        |  Entre CTA e rodapé       |
+        =============================
+        */
+        .divisoria {
+            height: 8px;
+            background: #fff;
+            width: 100%;
+            border: none;
+        }
+        /*
+        =============================
+        |  RODAPÉ                   |
+        |  Fundo sólido separado    |
+        =============================
+        */
+        footer {
+            background: #DAA520 !important;
         }
         
         /* Animações */
@@ -159,8 +229,8 @@
             position: fixed !important;
             bottom: 20px !important;
             right: 20px !important;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
-            color: white !important;
+            background: #25D366 !important; /* verde padrão WhatsApp */
+            color: #fff !important;
             width: 60px !important;
             height: 60px !important;
             border-radius: 50% !important;
@@ -176,6 +246,7 @@
             animation: bounce 1s infinite ease-in-out !important;
             opacity: 1 !important;
             visibility: visible !important;
+            -webkit-appearance: none !important;
         }
         
         .whatsapp-float:hover {
@@ -507,11 +578,33 @@
         /* Gradiente vinho escuro para títulos */
         .titulo-gradiente {
             font-weight: bold;
-            background: linear-gradient(90deg, #4b002a, #8a054b, #c72c70);
+            background: linear-gradient(135deg, #4b002a 0%, #8a054b 30%, #B85450 60%, #DAA520 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
+        }
+
+        /* Títulos com terracota para contraste */
+        h1, h2, h3, h4, h5, h6, .titulo-gradiente {
+            color: #B85450 !important;
+        }
+
+        /* Links em terracota */
+        a, .link {
+            color: #B85450;
+        }
+
+        /* Botões: fundo terracota, texto branco */
+        button, .btn, .neon-button, .bumble-pulse {
+            background: #B85450 !important;
+            color: #fff !important;
+            border: none;
+        }
+
+        /* Navbar sempre com cor única, sem gradiente */
+        .navbar-unica-cor {
+            background: #FDF9F3 !important; /* bege/branco, pode trocar se quiser outra cor sólida */
         }
     </style>
     
@@ -541,7 +634,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-warm-white/95 to-cream/95 backdrop-blur-lg border-b border-terracota/10 shadow-soft transition-all duration-300">
+    <nav class="fixed top-0 left-0 right-0 z-50 navbar-unica-cor backdrop-blur-lg border-b border-terracota/10 shadow-soft transition-all duration-300">
         <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
                                     <h2 class="text-xl font-poppins font-semibold text-deep-brown flex items-center titulo-gradiente">
@@ -1017,7 +1110,7 @@
     </section>
 
     <!-- Contact CTA Section -->
-    <section id="contact" class="py-20 bg-gradient-section relative">
+    <section id="contact" class="py-20">
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center space-y-6" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown titulo-gradiente">Garanta sua sessão exclusiva com a massoterapeuta Simone</h2>
@@ -1030,8 +1123,11 @@
         </div>
     </section>
 
+    <!-- Linha divisória clara -->
+    <div class="divisoria"></div>
+
     <!-- Footer -->
-    <footer class="bg-gradient-footer text-white py-16">
+    <footer class="text-white py-16">
         <div class="max-w-7xl mx-auto px-8">
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="space-y-4">
