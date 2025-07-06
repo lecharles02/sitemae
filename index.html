@@ -11,13 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     
     <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
     
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -503,6 +503,16 @@
             70% { opacity: 0; transform: translate(-50%, -50%) scale(1.8); }
             100% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
         }
+
+        /* Gradiente vinho escuro para títulos */
+        .titulo-gradiente {
+            font-weight: bold;
+            background: linear-gradient(90deg, #4b002a, #8a054b, #c72c70);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
     </style>
     
     <!-- Dados estruturados para SEO -->
@@ -534,7 +544,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-warm-white/95 to-cream/95 backdrop-blur-lg border-b border-terracota/10 shadow-soft transition-all duration-300">
         <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                                    <h2 class="text-xl font-poppins font-semibold text-deep-brown flex items-center">
+                                    <h2 class="text-xl font-poppins font-semibold text-deep-brown flex items-center titulo-gradiente">
                     Simone
                     <i class="fas fa-spa mx-2 text-terracota"></i>
                                             <span class="text-sm font-poppins text-deep-brown ml-2">Massagens tântricas e relaxantes</span>
@@ -570,7 +580,7 @@
                 <div class="space-y-8">
                     <span class="inline-block text-sm font-medium text-primary uppercase tracking-widest" data-aos="fade-down">Especialista em bem-estar no Centro e Zona Sul do RJ</span>
                     
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-dark leading-tight" data-aos="fade-up" data-aos-delay="100">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-dark leading-tight titulo-gradiente" data-aos="fade-up" data-aos-delay="100">
                         Seu corpo pede pausa. Sua mente pede alívio. Eu entrego os dois — com prazer.
                     </h1>
                     
@@ -601,7 +611,7 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="inline-block text-sm font-medium text-primary uppercase tracking-widest mb-4">Nossos Serviços</span>
-                <h2 class="text-4xl md:text-5xl font-poppins font-bold mb-6 text-dark">Experiências de Prazer e Bem-Estar</h2>
+                <h2 class="text-4xl md:text-5xl font-poppins font-bold mb-6 text-dark titulo-gradiente">Experiências de Prazer e Bem-Estar</h2>
                 <p class="text-lg text-dark/80 max-w-3xl mx-auto">Cada sessão é personalizada para despertar sensações e renovar sua energia. Atendo no Centro e Zona Sul do Rio de Janeiro.</p>
             </div>
             
@@ -611,7 +621,7 @@
                     <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-hands text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-poppins font-semibold text-dark mb-4">Massagem Relaxante</h3>
+                    <h3 class="text-2xl font-poppins font-semibold text-dark mb-4 titulo-gradiente">Massagem Relaxante</h3>
                     <p class="text-dark/70 mb-6">Alivia tensões, reduz o estresse e proporciona relaxamento físico e mental.</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-dark/80">
@@ -638,7 +648,7 @@
                     <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-heart text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4">Massagem Tântrica</h3>
+                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4 titulo-gradiente">Massagem Tântrica</h3>
                     <p class="text-deep-brown/70 mb-6">Estimula a sensibilidade do corpo, aumenta o autoconhecimento e proporciona bem-estar.</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-deep-brown/80">
@@ -665,7 +675,7 @@
                     <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-spa text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4">Massagem Nuru</h3>
+                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4 titulo-gradiente">Massagem Nuru</h3>
                     <p class="text-deep-brown/70 mb-6">Massagem feita com gel especial, usando o corpo para deslizar e relaxar profundamente.</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-deep-brown/80">
@@ -692,7 +702,7 @@
                     <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-tint text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4">Drenagem Linfática</h3>
+                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4 titulo-gradiente">Drenagem Linfática</h3>
                     <p class="text-deep-brown/70 mb-6">Ajuda a eliminar líquidos e toxinas, reduz inchaço e melhora a circulação.</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-deep-brown/80">
@@ -719,7 +729,7 @@
                     <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-cut text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4">Depilação</h3>
+                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4 titulo-gradiente">Depilação</h3>
                     <p class="text-deep-brown/70 mb-6">Remoção de pelos com cera. Virilha total, axila e outras áreas.</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-deep-brown/80">
@@ -746,7 +756,7 @@
                     <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fa-solid fa-shoe-prints text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4">Reflexologia Podal</h3>
+                    <h3 class="text-2xl font-poppins font-semibold text-deep-brown mb-4 titulo-gradiente">Reflexologia Podal</h3>
                     <p class="text-deep-brown/70 mb-6">Técnica oriental que estimula pontos reflexos nos pés para equilibrar todo o corpo e promover relaxamento profundo</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-deep-brown/80">
@@ -782,7 +792,7 @@
                 
                 <div class="space-y-8" data-aos="slide-left" data-aos-duration="300">
                     <span class="inline-block text-sm font-medium text-terracota uppercase tracking-widest">Sobre Mim</span>
-                    <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown">Simone - Massoterapeuta no Centro e Zona Sul do RJ</h2>
+                    <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown titulo-gradiente">Simone - Massoterapeuta no Centro e Zona Sul do RJ</h2>
                     <p class="text-lg text-deep-brown/80 leading-relaxed">
                         Sou Simone, massoterapeuta com 6 anos de experiência. Meu objetivo é proporcionar relaxamento profundo, bem-estar e despertar sensações únicas em cada sessão. Atendo homens e mulheres que buscam qualidade de vida, alívio do estresse e conexão com o próprio corpo. Agende sua massagem e sinta a diferença de um atendimento profissional e acolhedor!
                     </p>
@@ -817,7 +827,7 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="inline-block text-sm font-medium text-terracota uppercase tracking-widest mb-4">Depoimentos</span>
-                <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown">O Que Dizem Nossos Clientes</h2>
+                <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown titulo-gradiente">O Que Dizem Nossos Clientes</h2>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
@@ -835,7 +845,7 @@
                             <i class="fas fa-user text-white"></i>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-deep-brown">Carlos R.</h4>
+                            <h4 class="font-semibold text-deep-brown titulo-gradiente">Carlos R.</h4>
                             <span class="text-deep-brown/60 text-sm">Cliente</span>
                         </div>
                     </div>
@@ -854,7 +864,7 @@
                             <i class="fas fa-user text-white"></i>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-deep-brown">Lucas M.</h4>
+                            <h4 class="font-semibold text-deep-brown titulo-gradiente">Lucas M.</h4>
                             <span class="text-deep-brown/60 text-sm">Cliente</span>
                         </div>
                     </div>
@@ -873,7 +883,7 @@
                             <i class="fas fa-user text-white"></i>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-deep-brown">Pedro T.</h4>
+                            <h4 class="font-semibold text-deep-brown titulo-gradiente">Pedro T.</h4>
                             <span class="text-deep-brown/60 text-sm">Cliente</span>
                         </div>
                     </div>
@@ -887,7 +897,7 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="inline-block text-sm font-medium text-terracota uppercase tracking-widest mb-4">Galeria</span>
-                <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown">Fotos da Simone e do Espaço</h2>
+                <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown titulo-gradiente">Fotos da Simone e do Espaço</h2>
             </div>
             
             <div class="flex justify-center space-x-4 mb-8">
@@ -943,13 +953,13 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="inline-block text-sm font-medium text-terracota uppercase tracking-widest mb-4">Perguntas Frequentes</span>
-                <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown">Tire Suas Dúvidas</h2>
+                <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown titulo-gradiente">Tire Suas Dúvidas</h2>
             </div>
             
             <div class="grid gap-4 max-w-4xl mx-auto">
                 <div class="faq-item bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="faq-question cursor-pointer p-6 flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-deep-brown">Você também trabalha com depilação?</h3>
+                        <h3 class="text-lg font-semibold text-deep-brown titulo-gradiente">Você também trabalha com depilação?</h3>
                         <i class="faq-toggle fas fa-plus text-terracota transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s, padding 0.3s; padding:0;">
@@ -960,7 +970,7 @@
                 </div>
                 <div class="faq-item bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="faq-question cursor-pointer p-6 flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-deep-brown">As massagens são indicadas para todos os públicos?</h3>
+                        <h3 class="text-lg font-semibold text-deep-brown titulo-gradiente">As massagens são indicadas para todos os públicos?</h3>
                         <i class="faq-toggle fas fa-plus text-terracota transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s, padding 0.3s; padding:0;">
@@ -971,7 +981,7 @@
                 </div>
                 <div class="faq-item bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
                     <div class="faq-question cursor-pointer p-6 flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-deep-brown">Posso escolher combinar massagens diferentes na mesma sessão?</h3>
+                        <h3 class="text-lg font-semibold text-deep-brown titulo-gradiente">Posso escolher combinar massagens diferentes na mesma sessão?</h3>
                         <i class="faq-toggle fas fa-plus text-terracota transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s, padding 0.3s; padding:0;">
@@ -982,7 +992,7 @@
                 </div>
                 <div class="faq-item bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
                     <div class="faq-question cursor-pointer p-6 flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-deep-brown">Quanto tempo dura cada sessão?</h3>
+                        <h3 class="text-lg font-semibold text-deep-brown titulo-gradiente">Quanto tempo dura cada sessão?</h3>
                         <i class="faq-toggle fas fa-plus text-terracota transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s, padding 0.3s; padding:0;">
@@ -993,7 +1003,7 @@
                 </div>
                 <div class="faq-item bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
                     <div class="faq-question cursor-pointer p-6 flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-deep-brown">Como faço para agendar?</h3>
+                        <h3 class="text-lg font-semibold text-deep-brown titulo-gradiente">Como faço para agendar?</h3>
                         <i class="faq-toggle fas fa-plus text-terracota transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s, padding 0.3s; padding:0;">
@@ -1010,7 +1020,7 @@
     <section id="contact" class="py-20 bg-gradient-section relative">
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center space-y-6" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown">Garanta sua sessão exclusiva com a massoterapeuta Simone</h2>
+                <h2 class="text-4xl md:text-5xl font-poppins font-bold text-deep-brown titulo-gradiente">Garanta sua sessão exclusiva com a massoterapeuta Simone</h2>
                 <p class="text-xl text-deep-brown/80 max-w-2xl mx-auto">Descubra uma nova dimensão de relaxamento e prazer</p>
                 <a href="https://wa.me/5521982224737" class="inline-flex items-center px-8 py-4 bg-white text-terra-brown border-2 border-terra-brown rounded-full font-medium text-lg transition-all duration-300 hover:bg-terra-brown hover:text-white hover:scale-105 shadow-medium bumble-pulse">
                     <i class="fab fa-whatsapp mr-2 text-terra-brown"></i>
@@ -1026,7 +1036,7 @@
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="space-y-4">
                     <div class="mb-6">
-                        <h3 class="text-2xl font-poppins font-bold mb-2"><span class="business-name">Simone</span><span class="text-accent-gold business-title">Massoterapeuta</span></h3>
+                        <h3 class="text-2xl font-poppins font-bold mb-2 titulo-gradiente"><span class="business-name">Simone</span><span class="text-accent-gold business-title">Massoterapeuta</span></h3>
                         <p class="text-white/80 business-description">Especialista em massagens relaxantes e sensuais no RJ</p>
                     </div>
                     <div class="flex space-x-4">
@@ -1036,7 +1046,7 @@
                     </div>
                 </div>
                 <div class="space-y-4">
-                                            <h4 class="text-xl font-poppins font-semibold mb-4">Contato</h4>
+                                            <h4 class="text-xl font-poppins font-semibold mb-4 titulo-gradiente">Contato</h4>
                     <div class="space-y-3">
                         <div class="flex items-center space-x-3">
                             <i class="fas fa-phone text-accent-gold"></i>
@@ -1049,7 +1059,7 @@
                     </div>
                 </div>
                 <div class="space-y-4">
-                                            <h4 class="text-xl font-poppins font-semibold mb-4">Horário de Atendimento</h4>
+                                            <h4 class="text-xl font-poppins font-semibold mb-4 titulo-gradiente">Horário de Atendimento</h4>
                     <div class="space-y-2">
                         <div class="flex justify-between items-center py-2 border-b border-white/10">
                             <span class="text-white/90 schedule">Segunda à Domingo - 10h às 20h</span>
